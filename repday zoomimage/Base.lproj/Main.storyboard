@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,44 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="repday_zoomimage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-03-eUP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo3" translatesAutoresizingMaskIntoConstraints="NO" id="ZK4-VA-M1D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZK4-VA-M1D" secondAttribute="trailing" id="AQG-kP-csA"/>
+                                    <constraint firstItem="ZK4-VA-M1D" firstAttribute="leading" secondItem="4Xi-03-eUP" secondAttribute="leading" id="MT3-qx-G1X"/>
+                                    <constraint firstItem="ZK4-VA-M1D" firstAttribute="top" secondItem="4Xi-03-eUP" secondAttribute="top" id="Nd1-1R-zdN"/>
+                                    <constraint firstItem="ZK4-VA-M1D" firstAttribute="centerX" secondItem="4Xi-03-eUP" secondAttribute="centerX" id="ReP-SE-R9W"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZK4-VA-M1D" secondAttribute="bottom" id="ZWH-MH-3l9"/>
+                                    <constraint firstItem="ZK4-VA-M1D" firstAttribute="centerY" secondItem="4Xi-03-eUP" secondAttribute="centerY" id="iRK-Wf-17j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Xi-03-eUP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="USm-6d-wff"/>
+                            <constraint firstItem="4Xi-03-eUP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZW3-6j-feq"/>
+                            <constraint firstAttribute="trailing" secondItem="4Xi-03-eUP" secondAttribute="trailing" id="feJ-3u-uyo"/>
+                            <constraint firstItem="4Xi-03-eUP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="idT-gX-qGB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo3" width="512" height="384"/>
+    </resources>
 </document>
